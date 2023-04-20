@@ -3,6 +3,8 @@
   --body-bg: #fafafa;
   --element-bg: #fff;
   --text-color: #111517;
+  --transition: 0.4s;
+  --link-hover-green: rgb(62, 163, 163);
 }
 
 
@@ -36,8 +38,8 @@ body {
   line-height: 16px;
   background-color: var(--body-bg);
   color: var(--text-color);
-  transition: background-color 0.4s ease,
-    color 0.4s ease;
+  transition: background-color var(--transition) ease,
+    color var(--transition) ease;
 }
 
 img {
@@ -72,6 +74,10 @@ a {
   flex-grow: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+}
+
+.main-content-inner {
+  padding-top: 80px;
 }
 
 
@@ -146,7 +152,7 @@ a {
   font-weight: 400;
   color: var(--text-color);
   background-color: var(--element-bg);
-  transition: background-color 0.4s ease;
+  transition: background-color var(--transition) ease;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
 }
 .filters-region-select {
@@ -156,7 +162,7 @@ a {
   border-radius: 5px;
   color: var(--text-color);
   background-color: var(--element-bg);
-  transition: background-color 0.4s ease;
+  transition: background-color var(--transition) ease;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
 }
 
@@ -209,7 +215,7 @@ a {
   color: var(--text-color)
 }
 .index-country-name-link:hover {
-  color: rgb(62, 163, 163);
+  color: var(--link-hover-green);
   text-decoration: underline;
 }
 
@@ -232,4 +238,150 @@ a {
 
 .index-country-details-value {
   margin-left: 4px;
+}
+
+
+
+
+
+/* Country Page */
+.country-page-back-wrapper {
+  margin-bottom: 80px;
+}
+
+.country-page-back-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 40px;
+  border-radius: 6px;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+}
+
+.country-page-back-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover-green);
+  opacity: 0.8;
+}
+
+.country-page-back-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.country-page-back-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+/* COUNTRY-PAGE-FLAG-INFO-WRAPPER */
+.country-page-flag-info {
+  display: flex;
+}
+
+.country-page-flag-img {
+  width: 560px;
+  height: 400px;
+  margin-right: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: var(--element-bg);
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* COUNTRY-INFO */
+.country-page-info {
+  width: 600px;
+  padding-top: 40px;
+}
+
+.country-page-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.country-page-dls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+.country-page-details {
+  width: 250px;
+}
+
+.country-page-details-item {
+  display: flex;
+}
+
+.country-page-details-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.country-page-details-title {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.country-page-details-value {
+  margin: 0;
+  font-weight: 300;
+}
+
+
+/* .country-page-border-countries */
+.country-page-border-countries {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.country-page-border-countries-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.country-page-border-countries-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.country-page-border-countries-link {
+  min-width: 96px;
+  padding: 5px 28px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  border-radius: 3px;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.11);
+  transition: background-color var(--transition) ease,
+    color var(--transition) ease;
+}
+
+.country-page-border-countries-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.country-page-border-countries-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover-green);
+  opacity: 0.8;
 }
